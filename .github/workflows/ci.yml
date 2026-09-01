@@ -13,8 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Show project files
-        run: ls -la
+      - name: Start application
+        run: |
+          APP_NAME="CI Test App" APP_VERSION="test" python3 server.py &
+          sleep 2
 
-      - name: Test Python
-        run: python3 --version
+      - name: Test application
+        run: curl -f http://127.0.0.1:8000
