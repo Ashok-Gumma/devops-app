@@ -20,3 +20,6 @@ jobs:
 
       - name: Test application
         run: curl -f http://127.0.0.1:8000
+
+      - name: Build Docker image
+        run: docker build -t devops-app:test .
