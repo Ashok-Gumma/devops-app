@@ -2,8 +2,8 @@ FROM python:3.12-alpine
 
 WORKDIR /app
 
-COPY index.html .
+COPY server.py .
 
 EXPOSE 8000
 
-CMD ["python3", "-m", "http.server", "8000"]	
+CMD ["python3", "server.py"]

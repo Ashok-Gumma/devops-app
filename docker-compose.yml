@@ -1,7 +1,9 @@
-
 services:
   app:
     build: .
     container_name: docker-app-container
     ports:
       - "8000:8000"
+    environment:
+      APP_NAME: "My DevOps App"
+      APP_VERSION: "v5"
