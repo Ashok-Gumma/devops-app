@@ -32,6 +32,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t ghcr.io/${{ github.repository }}:latest .
-      - name: Push Docker image
-        run: docker push ghcr.io/${{ github.repository }}:latest
+        run: docker build -t ghcr.io/ashok-gumma/devops-app:latest .
+      - name: Push Docker imagex
+        run: docker push ghcr.io/ashok-gumma/devops-app:latest
